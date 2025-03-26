@@ -1,9 +1,14 @@
 body{ 
     background-color:rgb(192, 192, 192);
+    font-family: "Delius", cursive;
+    display: flex;
+    flex-direction:row;
     
 }
 .marca{
     color: rgb(172, 5, 5);
+    font-family: "Bangers", system-ui;
+    font-size: 60px;
 }
 .cardapio-itens{
     display: flex;
@@ -16,11 +21,6 @@ body{
     font-size: 22px;
 }
 
-.apresentacao{
-    display: flex;
-    flex-direction: row
-    ;
-}
 .texto{
     display: flex;
     flex-direction: column;
@@ -29,4 +29,8 @@ body{
 .foto{
     border: 0;
     padding: 500px;
+}
+
+img{
+    border-radius: 200px;
 }
