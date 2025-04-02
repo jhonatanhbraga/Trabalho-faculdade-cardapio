@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Lanchonete </title>
+     <link rel="stylesheet" href="style.css">
+     <script src="index.js"></script>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');;
+        </style></head>
+  
+<body>
+    <div class="apresentacao">
+         <h1 class="marca">Mega lanches</h1>
+             <p>O melhor lanche na porta da sua casa!</p>
+         <h2 class="titulos-cardapio">Cardápio</h2><!--por os laches ao lado-->
+         <h3 class="titulos">Lanches</h3>
+             <ul class="itens-cardapio">
+             <li>Cachorro quente R$ 8,00 (Pão, Salsicha, milho, batata palha e ketchup) </li>
+             <button onclick="adicionarAoCarrinho(8)">Adicionar ao carrinho</button>
+             <li>Hamburguer R$ 10,00 (Pão, carne, ovo, salada e molho)</li>
+            <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button></ul>
+         <h4 class="titulos">Petiscos</h4>
+             <ul><li>Fritas R$ 6,00</li>
+             <button onclick="adicionarAoCarrinho(6)">Adicionar ao carrinho</button>
+             <li>Doritos R$ 5,00</li>
+             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button></ul>
+         <h5 class="titulos">Bebidas</h5>      
+             <ul>
+             <li>Guaravita R$ 2,00</li>
+             <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
+             <li>Coca lata R$ 5,00</li>
+             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+             </ul>    
+         <h6>
+             <ul id="itensCarrinho"></ul>
+             <p><strong>Total:</strong>R$ <span id="total">0,00</span></p>Confirmar pedido</h6>
+
+    </div>
+
+       <img src="imagens/imagem de lanches.webp" alt="imagem de lanches" width="700px" height="500px";
+</body>
+</html>
+
