@@ -3,11 +3,14 @@ const itensCarrinho = [];// Array para armazenar os itens do carrinho
 function adicionarAoCarrinho (preco){   
     total += preco;
 
+
+    
+
 itensCarrinho.push(preco);//add ao carrinho
 document.getElementById("total").textContent = total.toFixed(2);
 //mostra novo total 
 }
-atualizarCarrinho();
+
 //atualiza a lista de itens no carrinho
 
 function atualizarCarrinho (){
@@ -22,4 +25,17 @@ function atualizarCarrinho (){
 
 
     })
+}
+
+
+
+function retirarDocarrinho (preco){   
+    total -= preco;
+
+
+    
+
+itensCarrinho.pop(preco);//retira do carrinho
+document.getElementById("total").textContent = total.toFixed(2);
+//mostra novo total 
 }

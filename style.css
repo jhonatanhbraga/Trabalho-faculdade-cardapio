@@ -4,21 +4,22 @@ body{
     display: flex;
     flex-direction:row;
     
+    
 }
 .marca{
     color: rgb(172, 5, 5);
     font-family: "Bangers", system-ui;
-    font-size: 60px;
+    font-size: 4rem;
 }
 .cardapio-itens{
     display: flex;
     flex-direction: column;}
 
 .titulos{
-    font-size: 16px;
+    font-size: 1rem;
 }
 .titulos-cardapio{
-    font-size: 22px;
+    font-size: 1.3rem;
 }
 
 .texto{
@@ -28,9 +29,9 @@ body{
 
 .foto{
     border: 0;
-    padding: 500px;
+    padding: 30rem;
 }
 
 img{
-    border-radius: 200px;
+    border-radius: 12.5rem;
 }

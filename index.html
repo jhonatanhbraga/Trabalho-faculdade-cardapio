@@ -18,24 +18,34 @@
     <div class="apresentacao">
          <h1 class="marca">ultra lanches</h1>
              <p>O melhor lanche na porta da sua casa!</p>
+
          <h2 class="titulos-cardapio">Cardápio</h2><!--por os laches ao lado-->
          <h3 class="titulos">Lanches</h3>
              <ul class="itens-cardapio">
+
              <li>Cachorro quente R$ 8,00 (Pão, Salsicha, milho, batata palha e ketchup) </li>
              <button onclick="adicionarAoCarrinho(8)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(8)">Tirar do carrinho</button>
              <li>Hamburguer R$ 10,00 (Pão, carne, ovo, salada e molho)</li>
-            <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button></ul>
+            <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(10)">Tirar do carrinho</button></ul>
          <h4 class="titulos">Petiscos</h4>
              <ul><li>Fritas R$ 6,00</li>
              <button onclick="adicionarAoCarrinho(6)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(6)">Tirar do carrinho</button>
              <li>Doritos R$ 5,00</li>
-             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button></ul>
+             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button></ul>
+                 
          <h5 class="titulos">Bebidas</h5>      
              <ul>
              <li>Guaravita R$ 2,00</li>
              <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(2)">Tirar do carrinho</button>
              <li>Coca lata R$ 5,00</li>
              <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+                 <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button>
+                 <button onclick="atualizarCarrinho(0)">limpar carrinho</button>
              </ul>    
          <h6>
              <ul id="itensCarrinho"></ul>
