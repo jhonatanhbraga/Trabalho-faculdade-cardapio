@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<body>
 <head>
-
-        
-    
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Lanchonete </title>
-     <link rel="stylesheet" href="style.css">
-     <script src="index.js"></script>
-     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');;
-        </style></head>
-  
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');
+    </style>
+</head>
+<body>
     <div class="apresentacao">
-         <h1 class="marca">ultra lanches</h1>
-             <p>O melhor lanche na porta da sua casa!</p>
+        <h1 class="marca">Ultra Lanches</h1>
+        <p>O melhor lanche na porta da sua casa!</p>
 
-         <h2 class="titulos-cardapio">Cardápio</h2><!--por os laches ao lado-->
-         <h3 class="titulos">Lanches</h3>
-             <ul class="itens-cardapio">
+        <h2 class="titulos-cardapio">Cardápio</h2>
 
-             <li>Cachorro quente R$ 8,00 (Pão, Salsicha, milho, batata palha e ketchup) </li>
-             <button onclick="adicionarAoCarrinho(8)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(8)">Tirar do carrinho</button>
-             <li>Hamburguer R$ 10,00 (Pão, carne, ovo, salada e molho)</li>
-            <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(10)">Tirar do carrinho</button></ul>
-         <h4 class="titulos">Petiscos</h4>
-             <ul><li>Fritas R$ 6,00</li>
-             <button onclick="adicionarAoCarrinho(6)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(6)">Tirar do carrinho</button>
-             <li>Doritos R$ 5,00</li>
-             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button></ul>
-                 
-         <h5 class="titulos">Bebidas</h5>      
-             <ul>
-             <li>Guaravita R$ 2,00</li>
-             <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(2)">Tirar do carrinho</button>
-             <li>Coca lata R$ 5,00</li>
-             <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
-                 <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button>
-                 <button onclick="atualizarCarrinho(0)">limpar carrinho</button>
-             </ul>    
-         <h6>
-             <ul id="itensCarrinho"></ul>
-             <p><strong>Total:</strong>R$ <span id="total">0,00</span></p>Confirmar pedido</h6>
+        <h3 class="titulos">Lanches</h3>
+        <ul class="itens-cardapio">
+            <li>
+                Cachorro-quente R$ 8,00 (Pão, Salsicha, milho, batata palha e ketchup)
+                <button onclick="adicionarAoCarrinho(8)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(8)">Tirar do carrinho</button>
+            </li>
+            <li>
+                Hambúrguer R$ 10,00 (Pão, carne, ovo, salada e molho)
+                <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(10)">Tirar do carrinho</button>
+            </li>
+        </ul>
 
-    </div>
+        <h4 class="titulos">Petiscos</h4>
+        <ul>
+            <li>
+                Fritas R$ 6,00
+                <button onclick="adicionarAoCarrinho(6)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(6)">Tirar do carrinho</button>
+            </li>
+            <li>
+                Doritos R$ 5,00
+                <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button>
+            </li>
+        </ul>
 
-       <img src="imagens/imagem de lanches.webp" alt="imagem de lanches" width="700px" height="500px">
+        <h5 class="titulos">Bebidas</h5>
+        <ul>
+            <li>
+                Guaravita R$ 2,00
+                <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(2)">Tirar do carrinho</button>
+            </li>
+            <li>
+                Coca lata R$ 5,00
+                <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+                <button onclick="retirarDoCarrinho(5)">Tirar do carrinho</button>
+            </li>
+        </ul>
 
+        <div><button onclick="limparCarrinho()">Limpar carrinho</button></div>
+        
+        <label for="info">Digite aqui seu endereço:</label><br>
+        <textarea id="info" name="info" rows="3" cols="35"></textarea>
+        <button onclick="alerta_endereco()">Confirmar endereço</button>
 
+        <h6>
+            <ul id="itensCarrinho"></ul>
+            <p><strong>Total:</strong> R$ <span id="total">0,00</span></p>
+            </h6>
+            <button onclick="confirmarPedido()">Confirmar pedido</button> 
+        
+        
+        </div>
+
+    <img src="imagens/imagem de lanches.webp" alt="imagem de lanches" width="700px" height="500px">
 </body>
 </html>
+
 
