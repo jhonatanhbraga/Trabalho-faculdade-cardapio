@@ -20,7 +20,7 @@ function retirarDoCarrinho(preco) {
 
 function atualizarCarrinho() {
     const listaItens = document.getElementById("itensCarrinho");
-    listaItens.innerHTML = ''; // Limpa a lista atual
+    listaItens.innerHTML = ''; // Limpa a lista 
 
     itensCarrinho.forEach((item, index) => {
         const li = document.createElement("li");
@@ -31,17 +31,34 @@ function atualizarCarrinho() {
 
 function limparCarrinho() {
     total = 0;
-    itensCarrinho.length = 0; // Esvazia o array
+    itensCarrinho.length = 0; // Esvazia 
     document.getElementById("total").textContent = total.toFixed(2);
     atualizarCarrinho();
 }
 
-function confirmarPedido(){
-     alert ("Pedido confirmado! Embreve estará em sua residência!")
 
-
-}
 
 function alerta_endereco(){
-    alert("Endereço confirmado!")
-}
+    const endereco = document.getElementById('endereco').value.trim(); 
+    if (endereco === '') {
+            alert('Adicione um endereço válido!');
+          } else {
+            alert('Endereço enviado com sucesso!');
+          }
+        }
+
+        function confirmarPedido() {
+            const endereco = document.getElementById('endereco').value.trim();
+        
+            if (endereco === '') {
+                alert('Adicione um endereço válido!');
+                return;
+            }
+        
+            if (itensCarrinho.length === 0) {
+                alert("Adicione algum item ao carrinho!");
+                return;
+            }
+        
+            alert("Pedido confirmado! Em breve estará em seu endereço!");
+        }
